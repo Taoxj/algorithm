@@ -20,12 +20,18 @@ public class TopK {
         // 模拟数据
         int[] data = {56, 275, 12, 6, 45, 478, 41, 1236, 456, 12, 546, 45};
 
-        // 获取前5个值
-        int[] top5 = topK(data, 5);
+        MinHeap heap = new MinHeap(data);
 
-        for (int i = 0; i < 5; i++) {
-            System.out.println(top5[i]);
+        for (int i = 0; i < data.length; i++) {
+            System.out.print(data[i] + " ");
         }
+
+//        // 获取前5个值
+//        int[] top5 = topK(data, 5);
+//
+//        for (int i = 0; i < 5; i++) {
+//            System.out.println(top5[i]);
+//        }
 
     }
 
@@ -65,7 +71,7 @@ public class TopK {
         }
 
         // 将数组转换成最小堆
-        private void buildHeap() {
+        public void buildHeap() {
             // 完全二叉树只有数组下标小于或等于 (data.length) / 2 - 1 的元素有孩子结点，遍历这些结点。
             // *比如上面的图中，数组有10个元素， (data.length) / 2 - 1的值为4，a[4]有孩子结点，但a[5]没有*
             for (int i = (data.length) / 2 - 1; i >= 0; i--) {
@@ -75,7 +81,7 @@ public class TopK {
         }
 
         // 创建调整堆
-        private void heapify(int val) {
+        public void heapify(int val) {
             int l = left(val);
             int r = right(val);
 
