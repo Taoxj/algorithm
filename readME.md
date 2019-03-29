@@ -24,3 +24,9 @@
 <p>Solution34：二叉树中和为某一值的路径</p>
 <p>Solution39：数组中超过一半的数字</p>
 
+<h3>设计模式</h3>
+<p>builderMode：建造者模式</p>
+<p>decorateMode：装饰器模式</p>
+<p>strategyMode：策略模式</p>
+<p>observerMode：观察者模式</p>
+<p>adapterMode：适配器模式</p>
