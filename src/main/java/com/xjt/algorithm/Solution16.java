@@ -1,7 +1,7 @@
 package com.xjt.algorithm;
 
 /**
- * [剑指offer] 面试题16：数值的整数次方
+ * [剑指offer] 面试题16：数值的整数次方，测试git版本
  */
 public class Solution16 {
 
@@ -54,7 +54,7 @@ public class Solution16 {
     }
 
     public static void main(String[] args) {
-        double a = Power(4,6);
+        double a = Power(4,5);
         System.out.println(a);
     }
 
