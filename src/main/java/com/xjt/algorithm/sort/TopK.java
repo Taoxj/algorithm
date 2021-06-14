@@ -10,10 +10,7 @@ public class TopK {
      */
 
     /**
-     * 思路：可以用最小堆
-     * 先用最小堆对数据中的前m个数做堆排序，然后把其他的数一一与最小堆中的根节点做比较，
-     * 大于根节点就与根节点替换，然后重整最小堆，小于或等于根节点就跳过
-     * 因为最小堆的根节点最小，所以这样就能找出最大的m个数了
+     * 思路：可以用最小堆 先用最小堆对数据中的前m个数做堆排序，然后把其他的数一一与最小堆中的根节点做比较， 大于根节点就与根节点替换，然后重整最小堆，小于或等于根节点就跳过 因为最小堆的根节点最小，所以这样就能找出最大的m个数了
      */
 
     public static void main(String[] args) {
@@ -26,12 +23,12 @@ public class TopK {
             System.out.print(data[i] + " ");
         }
 
-//        // 获取前5个值
-//        int[] top5 = topK(data, 5);
-//
-//        for (int i = 0; i < 5; i++) {
-//            System.out.println(top5[i]);
-//        }
+        // // 获取前5个值
+        // int[] top5 = topK(data, 5);
+        //
+        // for (int i = 0; i < 5; i++) {
+        // System.out.println(top5[i]);
+        // }
 
     }
 
@@ -58,7 +55,6 @@ public class TopK {
 
         return topk;
     }
-
 
     public static class MinHeap {
         // 堆的数据结构，数组

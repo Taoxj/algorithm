@@ -35,19 +35,16 @@ public class Solution22 {
         if (head == null || k == 0) {
             return null;
         }
-        ListNode temp = head;
+        ListNode pA = head;
+        ListNode pB = head;
         //判断k是否超过链表节点的个数，注意是 i < k - 1
         for (int i = 0; i < k - 1; i++) {
-            if (temp.next != null) {
-                temp = temp.next;
+            if (pA.next != null) {
+                pA = pA.next;
             } else {
                 return null;
             }
         }
-        ListNode pA = head;
-        ListNode pB = head;
-        for (int i = 0; i < k - 1; i++)
-            pA = pA.next;
         while (pA.next != null) {
             pA = pA.next;
             pB = pB.next;

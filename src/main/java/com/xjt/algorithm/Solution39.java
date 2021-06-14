@@ -29,7 +29,6 @@ public class Solution39 {
      * 遍历下一个数字时，若它与之前保存的数字相同，则次数加1，否则次数减1；
      * 若次数为0，则保存下一个数字，并将次数置为1。遍历结束后，所保存的数字即为所求。最后再判断它是否符合条件。
      */
-
     public int MoreThanHalfNum_Solution(int[] array) {
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
         int length = array.length;
@@ -43,6 +42,35 @@ public class Solution39 {
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             if (entry.getValue() * 2 > length) {
                 return entry.getKey();
+            }
+        }
+        return 0;
+    }
+
+    public int MoreThanHalfNum_Solution2(int [] array) {
+        if(array==null || array.length<=0)
+            return 0;
+        int num=array[0];
+        int count=1;
+        for(int i=1;i<array.length;i++){
+            if(count==0) {
+                num=array[i];
+                count++;
+            }
+            else if(array[i]==num)
+                count++;
+            else
+                count--;
+        }
+        if(count>0){
+            int times=0;
+            for(int i=0;i<array.length;i++){
+                if(array[i]==num){
+                    times++;
+                }
+            }
+            if(times*2>array.length){
+                return num;
             }
         }
         return 0;

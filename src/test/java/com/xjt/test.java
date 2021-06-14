@@ -1,5 +1,9 @@
 package com.xjt;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class test {
 
     public static void main(String[] args) {
@@ -9,7 +13,25 @@ public class test {
         }
 //        System.out.println(index);
 
-        System.out.println(GetUglyNumber_Solution(4));
+//        System.out.println(GetUglyNumber_Solution(4));
+        int i = 1;
+        System.out.println(++i + 1);
+        System.out.println(i++ + 1);
+
+        int j = 12;
+        System.out.println(j*=++j);
+
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(-5);
+        list.add(-9);
+        list.add(56);
+        list.add(23);
+        Collections.sort(list,((o1, o2) -> {
+            return o2-o1;
+        }));
+        System.out.println(list);
     }
 
     public static int GetUglyNumber_Solution(int index) {
@@ -28,4 +50,5 @@ public class test {
         }
         return res[index - 1];
     }
+
 }
